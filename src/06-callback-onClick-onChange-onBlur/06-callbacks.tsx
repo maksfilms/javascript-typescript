@@ -19,12 +19,16 @@ const User = () => {
         const onChangeHandler = () =>  {
             console.log("text is changed")
         }
+        const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+            console.log(event.currentTarget.value)
+        }
 
         return (
             <div>
                 <button onClick={sayHello}>Hello</button>
                 <button onClick={sayBye}>Bye</button>
                 <textarea onChange={onChangeHandler}/>
+                <input onChange={onChangeInputHandler} />
             </div>
         )
     }
