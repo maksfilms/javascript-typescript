@@ -16,10 +16,15 @@ const User = () => {
         const sayBye = () => {
             alert("Bye")
         }
+        const onChangeHandler = () =>  {
+            console.log("text is changed")
+        }
+
         return (
             <div>
                 <button onClick={sayHello}>Hello</button>
                 <button onClick={sayBye}>Bye</button>
+                <textarea onChange={onChangeHandler}/>
             </div>
         )
     }
