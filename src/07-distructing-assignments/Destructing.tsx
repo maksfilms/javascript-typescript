@@ -47,3 +47,22 @@ const ManComponent: React.FC<PropsType> = ({title, man, ...rest}) => { //rest о
         </div>
     )
 }*/
+
+//DISTRACTING ARRAYS
+
+let lessons = [
+    {title: '1'},
+    {title: '2'},
+    {title: '3'},
+    {title: '4'},
+]
+
+const first = lessons[0]
+const second = lessons[1]
+//or
+const [firs, sec] = lessons
+
+const [,,third] = lessons // 3 element from array
+const [,a] = lessons // 2 element from array
+
+const [firstLesson, ...restLessons] = lessons // 1 element and rest elements
