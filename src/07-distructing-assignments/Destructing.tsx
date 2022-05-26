@@ -66,3 +66,25 @@ const [,,third] = lessons // 3 element from array
 const [,a] = lessons // 2 element from array
 
 const [firstLesson, ...restLessons] = lessons // 1 element and rest elements
+
+///
+
+let someVariable = {
+    name: 'Max',
+    age: 32,
+    lessonsMy: [{title: "1"}, {title: 2}],
+    address: {
+        street: {
+            title: 'BroadWay'
+        }
+    }
+}
+
+/*let {name, lessonsMy} = someVariable //name = 'Max', age
+const {title} = someVariable.address.street*/
+
+let {name, address: {street}} = someVariable // забираем name и street у adress
+
+let {name: vorname, age: alter} = someVariable // записали name в vorname и age в alter
+//vorname = Max
+//alter = 32
